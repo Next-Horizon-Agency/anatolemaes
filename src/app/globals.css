@@ -1,11 +1,6 @@
 @import "tailwindcss";
 
-/*
-  Thème unique sombre (salle de projection) : l'identité du site repose dessus.
-  Palette : monochrome neutre + un seul accent (rouge « REC »).
-  Formes : conteneurs et médias à angles vifs (radius 0), éléments interactifs en pilule.
-  Échelle z-index : contenu 0-10 · nav 40 · grain 50 · lightbox 70 · préchargement 80.
-*/
+
 @theme {
   --color-ink: #0c0c0d;
   --color-ink-2: #151517;
