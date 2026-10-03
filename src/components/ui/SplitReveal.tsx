@@ -23,11 +23,11 @@ export default function SplitReveal({ text, className = "", delay = 0, stagger =
   return (
     <span ref={ref} className={`inline-flex flex-wrap ${className}`}>
       <span className="sr-only">{text}</span>
-      {/* Passage à la ligne entre les mots, jamais au milieu d'un mot */}
+      {/* Passage à la ligne entre les mots, jamais au milieu d'un mot. Marge verticale du masque : les lettres rondes (O, S) débordent de la ligne */}
       {text.split(" ").map((word, w, words) => {
         const offset = words.slice(0, w).join(" ").length + (w > 0 ? 1 : 0);
         return (
-          <span key={w} aria-hidden className="-mt-[0.15em] inline-flex overflow-hidden pt-[0.15em]">
+          <span key={w} aria-hidden className="-my-[0.15em] inline-flex overflow-hidden py-[0.15em]">
             {word.split("").map((char, i) => (
               <motion.span
                 key={i}

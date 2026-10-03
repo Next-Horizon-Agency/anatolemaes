@@ -38,7 +38,7 @@ export default function Contact() {
   const reduce = useReducedMotion();
   const [copied, setCopied] = useState(false);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end end"] });
-  // Le titre « Action » monte et s'élargit comme un générique de fin
+  // Le titre « Contact » monte et s'élargit comme un générique de fin
   const scale = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
   const y = useTransform(scrollYProgress, [0, 1], ["30%", "0%"]);
 
@@ -57,7 +57,7 @@ export default function Contact() {
           style={reduce ? undefined : { scale, y }}
           className="origin-bottom-left font-display text-[24vw] uppercase leading-[0.8] md:text-[17vw]"
         >
-          Action<span className="text-rec">.</span>
+          Contact<span className="text-rec">.</span>
         </motion.h2>
 
         <div className="mt-16 grid grid-cols-1 gap-12 md:grid-cols-[2fr_1fr] md:items-end">
@@ -96,7 +96,20 @@ export default function Contact() {
         </div>
 
         <div className="mt-20 flex items-center justify-between border-t border-paper/10 pt-6 text-sm text-mute">
-          <p>© {new Date().getFullYear()} Anatole Maes</p>
+          <div className="flex flex-col gap-1 md:flex-row md:gap-6">
+            <p>© {new Date().getFullYear()} Anatole Maes</p>
+            <p>
+              Une réalisation{" "}
+              <a
+                href="https://nexthorizon.be"
+                target="_blank"
+                rel="noopener"
+                className="text-paper underline decoration-paper/30 underline-offset-4 transition-colors hover:text-rec hover:decoration-rec"
+              >
+                Next Horizon
+              </a>
+            </p>
+          </div>
           <Magnetic>
             <button
               onClick={() => (lenis ? lenis.scrollTo(0, { duration: 2 }) : window.scrollTo({ top: 0, behavior: "smooth" }))}
