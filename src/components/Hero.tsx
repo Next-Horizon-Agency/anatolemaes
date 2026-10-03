@@ -10,10 +10,6 @@ import { scrollToId, useLenis } from "./SmoothScroll";
 import SplitReveal from "./ui/SplitReveal";
 import Magnetic from "./ui/Magnetic";
 
-const Corner = ({ className }: { className: string }) => (
-  <span className={`absolute size-6 border-paper/80 md:size-10 ${className}`} />
-);
-
 export default function Hero({ ready }: { ready: boolean }) {
   const ref = useRef<HTMLElement>(null);
   const lenis = useLenis();
@@ -27,8 +23,6 @@ export default function Hero({ ready }: { ready: boolean }) {
   const mediaScale = useTransform(scrollYProgress, [0, 1], [1.15, 1]);
   const firstX = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
   const lastX = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-  // Fonction plutôt que plage : évite l'accélération ScrollTimeline, imprécise sur un parent sticky
-  const cornersOpacity = useTransform(scrollYProgress, (v) => 1 - Math.min(v / 0.3, 1));
 
   return (
     <section ref={ref} className={reduce ? "relative" : "relative h-[220dvh]"} aria-label="Introduction">
@@ -58,18 +52,6 @@ export default function Hero({ ready }: { ready: boolean }) {
           </motion.div>
           <div className="absolute inset-0 bg-ink/40" />
           <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-transparent to-ink/60" />
-        </motion.div>
-
-        {/* Coins de viseur : cadrent l'image comme dans une caméra */}
-        <motion.div
-          aria-hidden
-          style={reduce ? undefined : { opacity: cornersOpacity }}
-          className="pointer-events-none absolute inset-4 md:inset-8"
-        >
-          <Corner className="left-0 top-0 border-l border-t" />
-          <Corner className="right-0 top-0 border-r border-t" />
-          <Corner className="bottom-0 left-0 border-b border-l" />
-          <Corner className="bottom-0 right-0 border-b border-r" />
         </motion.div>
 
         <div className="relative flex h-full flex-col justify-center px-4 pt-16 md:px-8">

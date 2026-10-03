@@ -167,6 +167,15 @@
         },
         {
           "type": "video",
+          "id": "personel/drone-foret",
+          "src": "/media/personel/drone-foret.mp4",
+          "preview": "/media/personel/drone-foret-preview.mp4",
+          "poster": "/media/personel/drone-foret.jpg",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "type": "video",
           "id": "personel/got",
           "src": "/media/personel/got.mp4",
           "preview": "/media/personel/got-preview.mp4",

@@ -127,7 +127,7 @@ export const projects: ProjectContent[] = [
       "Grâce à l’obtention de différents certificats et brevets de pilotage de drone (A1, A3 et Open A2), j’ai eu l’occasion de réaliser des prises de vue aériennes lors de différentes missions professionnelles.",
       "Le drone est un outil avec lequel je suis particulièrement à l’aise et que j’utilise pour apporter une perspective différente aux projets que je réalise. Avant chaque vol, j’accorde une attention particulière à l’environnement, aux conditions météorologiques et aux éventuelles contraintes présentes sur le lieu afin de garantir des conditions de vol adaptées et sécurisées.",
     ],
-    media: ["personel/dji-20260614144045-0012-d"],
+    media: ["personel/dji-20260614144045-0012-d", "personel/drone-foret"],
   },
   {
     title: "Photographie",

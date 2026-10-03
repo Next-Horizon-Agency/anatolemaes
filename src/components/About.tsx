@@ -54,7 +54,7 @@ export default function About() {
         <div className="flex flex-col justify-between gap-10 md:col-span-8">
           <p
             ref={ref}
-            className="text-[8vw] font-medium leading-[1.08] tracking-tight md:text-[4vw] min-[1400px]:text-[56px]"
+            className="text-pretty text-[8vw] font-medium leading-[1.08] tracking-tight md:text-[clamp(2rem,4vw,3.5rem)]"
           >
             {reduce
               ? profile.intro
