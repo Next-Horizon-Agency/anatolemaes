@@ -63,7 +63,8 @@ export default function Hero({ ready }: { ready: boolean }) {
             <span className="sr-only"> {profile.lastName}</span>
           </motion.h1>
 
-          <div className="flex flex-col gap-5 py-4 md:flex-row md:items-center md:gap-8 md:py-5">
+          {/* Au-dessus du nom : le masque des lettres de « Maes » déborde vers le haut et capterait les clics */}
+          <div className="relative z-10 flex flex-col gap-5 py-4 md:flex-row md:items-center md:gap-8 md:py-5">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={ready ? { opacity: 1, y: 0 } : undefined}
