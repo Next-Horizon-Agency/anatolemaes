@@ -1,0 +1,180 @@
+{
+  "projects": [
+    {
+      "slug": "automobile",
+      "items": [
+        {
+          "type": "video",
+          "id": "automobile/lot",
+          "src": "/media/automobile/lot.mp4",
+          "preview": "/media/automobile/lot-preview.mp4",
+          "poster": "/media/automobile/lot.jpg",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "type": "video",
+          "id": "automobile/supertrofeo",
+          "src": "/media/automobile/supertrofeo.mp4",
+          "preview": "/media/automobile/supertrofeo-preview.mp4",
+          "poster": "/media/automobile/supertrofeo.jpg",
+          "width": 1080,
+          "height": 1920
+        },
+        {
+          "type": "video",
+          "id": "automobile/toyota",
+          "src": "/media/automobile/toyota.mp4",
+          "preview": "/media/automobile/toyota-preview.mp4",
+          "poster": "/media/automobile/toyota.jpg",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "type": "photo",
+          "id": "automobile/01",
+          "src": "/media/automobile/01.jpg",
+          "width": 1080,
+          "height": 1350
+        }
+      ]
+    },
+    {
+      "slug": "gsl-chatelineau",
+      "items": [
+        {
+          "type": "video",
+          "id": "gsl-chatelineau/gsl-chatelineau-3",
+          "src": "/media/gsl-chatelineau/gsl-chatelineau-3.mp4",
+          "preview": "/media/gsl-chatelineau/gsl-chatelineau-3-preview.mp4",
+          "poster": "/media/gsl-chatelineau/gsl-chatelineau-3.jpg",
+          "width": 1080,
+          "height": 1920
+        },
+        {
+          "type": "video",
+          "id": "gsl-chatelineau/gsl-fontaine-3",
+          "src": "/media/gsl-chatelineau/gsl-fontaine-3.mp4",
+          "preview": "/media/gsl-chatelineau/gsl-fontaine-3-preview.mp4",
+          "poster": "/media/gsl-chatelineau/gsl-fontaine-3.jpg",
+          "width": 1080,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "slug": "hero",
+      "items": [
+        {
+          "type": "video",
+          "id": "hero/banner-video",
+          "src": "/media/hero/banner-video.mp4",
+          "preview": null,
+          "poster": "/media/hero/banner-video.jpg",
+          "width": 1920,
+          "height": 1080
+        }
+      ]
+    },
+    {
+      "slug": "les-maisons-de-marjorie-toma",
+      "items": [
+        {
+          "type": "video",
+          "id": "les-maisons-de-marjorie-toma/vodelvid",
+          "src": "/media/les-maisons-de-marjorie-toma/vodelvid.mp4",
+          "preview": "/media/les-maisons-de-marjorie-toma/vodelvid-preview.mp4",
+          "poster": "/media/les-maisons-de-marjorie-toma/vodelvid.jpg",
+          "width": 1280,
+          "height": 720
+        },
+        {
+          "type": "photo",
+          "id": "les-maisons-de-marjorie-toma/09",
+          "src": "/media/les-maisons-de-marjorie-toma/09.jpg",
+          "width": 2048,
+          "height": 1365
+        },
+        {
+          "type": "photo",
+          "id": "les-maisons-de-marjorie-toma/10",
+          "src": "/media/les-maisons-de-marjorie-toma/10.jpg",
+          "width": 2048,
+          "height": 1365
+        },
+        {
+          "type": "photo",
+          "id": "les-maisons-de-marjorie-toma/11",
+          "src": "/media/les-maisons-de-marjorie-toma/11.jpg",
+          "width": 2048,
+          "height": 1365
+        },
+        {
+          "type": "photo",
+          "id": "les-maisons-de-marjorie-toma/12",
+          "src": "/media/les-maisons-de-marjorie-toma/12.jpg",
+          "width": 2048,
+          "height": 1365
+        },
+        {
+          "type": "photo",
+          "id": "les-maisons-de-marjorie-toma/13",
+          "src": "/media/les-maisons-de-marjorie-toma/13.jpg",
+          "width": 2048,
+          "height": 1365
+        },
+        {
+          "type": "photo",
+          "id": "les-maisons-de-marjorie-toma/17",
+          "src": "/media/les-maisons-de-marjorie-toma/17.jpg",
+          "width": 2048,
+          "height": 1365
+        },
+        {
+          "type": "photo",
+          "id": "les-maisons-de-marjorie-toma/19",
+          "src": "/media/les-maisons-de-marjorie-toma/19.jpg",
+          "width": 2048,
+          "height": 1365
+        }
+      ]
+    },
+    {
+      "slug": "michaux",
+      "items": [
+        {
+          "type": "video",
+          "id": "michaux/michaux",
+          "src": "/media/michaux/michaux.mp4",
+          "preview": "/media/michaux/michaux-preview.mp4",
+          "poster": "/media/michaux/michaux.jpg",
+          "width": 1080,
+          "height": 1920
+        }
+      ]
+    },
+    {
+      "slug": "personel",
+      "items": [
+        {
+          "type": "video",
+          "id": "personel/dji-20260614144045-0012-d",
+          "src": "/media/personel/dji-20260614144045-0012-d.mp4",
+          "preview": "/media/personel/dji-20260614144045-0012-d-preview.mp4",
+          "poster": "/media/personel/dji-20260614144045-0012-d.jpg",
+          "width": 1920,
+          "height": 1080
+        },
+        {
+          "type": "video",
+          "id": "personel/got",
+          "src": "/media/personel/got.mp4",
+          "preview": "/media/personel/got-preview.mp4",
+          "poster": "/media/personel/got.jpg",
+          "width": 1080,
+          "height": 1920
+        }
+      ]
+    }
+  ]
+}
