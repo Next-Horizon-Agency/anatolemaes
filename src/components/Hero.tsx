@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ArrowDownRight } from "@phosphor-icons/react";
 import { motion, useMotionTemplate, useReducedMotion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { profile } from "@/data/content";
 import { heroMedia } from "@/lib/media";
 import { scrollToId, useLenis } from "./SmoothScroll";
@@ -12,6 +12,7 @@ import Magnetic from "./ui/Magnetic";
 
 export default function Hero({ ready }: { ready: boolean }) {
   const ref = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const lenis = useLenis();
   const reduce = useReducedMotion();
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
@@ -24,6 +25,14 @@ export default function Hero({ ready }: { ready: boolean }) {
   const firstX = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
   const lastX = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
+  // La vidéo attend la fin du préchargement : le loader se termine sur sa première image (le poster), raccord sans saut
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!ready || reduce || !v) return;
+    v.currentTime = 0;
+    v.play().catch(() => {});
+  }, [ready, reduce]);
+
   return (
     <section ref={ref} className={reduce ? "relative" : "relative h-[220dvh]"} aria-label="Introduction">
       <div className="sticky top-0 h-dvh min-h-[560px] overflow-hidden">
@@ -35,9 +44,10 @@ export default function Hero({ ready }: { ready: boolean }) {
           <motion.div style={reduce ? undefined : { scale: mediaScale }} className="absolute inset-0">
             {heroMedia?.type === "video" ? (
               <video
+                ref={videoRef}
                 src={heroMedia.preview ?? heroMedia.src}
                 poster={heroMedia.poster ?? undefined}
-                autoPlay={!reduce}
+                preload="auto"
                 muted
                 loop
                 playsInline
